@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Route, Router} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from './components/Navbar'
@@ -11,14 +11,16 @@ import CreateUser from './components/CreateUser'
 export default class App extends Component {
   render() {
     return(
-        <Router>
-          <Navbar />
-          <br />
-          <Route path="/" exact component={ExerciseList} />
-          <Route path="/edit/:id" component={EditExercise} />
-          <Route path="/create_exercise" component={CreateExercise} />
-          <Route path="/create_user" component={CreateUser} />
-        </Router>
+        <div className="container">
+          <Router>
+            <Navbar />
+            <br/>
+            <Route path="/" exact component={ExerciseList} />
+            <Route path="/edit/:id" component={EditExercise} />
+            <Route path="/create_exercise" component={CreateExercise} />
+            <Route path="/create_user" component={CreateUser} />
+          </Router>
+        </div>
       )
   }
 }
