@@ -7,4 +7,4 @@
 4. MongoDB
 
 ## Live URL: 
-coming soon...
+`https://mern-exercise-tracker.herokuapp.com/`
